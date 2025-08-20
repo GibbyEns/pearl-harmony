@@ -1,0 +1,241 @@
+.title {
+    font-size: 16px;
+    color: #f3efef;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h1 {
+  font-size: 4rem;         /* Big and bold */
+  font-weight: 800;        /* Extra thick */
+  letter-spacing: 1px;     /* Slight spacing for clarity */
+  text-transform: uppercase; /* Optional: all caps */
+  color: #170118;          /* Deep, elegant color */
+  margin-bottom: 20px;     /* Breathing room */
+  font-style: italic; /* Optional: italic for elegance */
+  text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+    background: linear-gradient(to bottom, #5bf78f, #c09afd);
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #f9f5ef;
+    color: #333;
+    position: relative;
+}
+.logo{
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+    margin-left: auto;
+}
+nav {
+  position: static;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #a06743;
+  font-weight: bold;
+}
+
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.counter {
+  font-size: 48px;
+  font-weight: bold;
+  color: #a06743;
+}
+#hover-effect {
+  transition: transform 0.3s ease;
+}
+
+.rise-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+  background: url('img/Logo img cropped.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background-image: url('img/Header.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.story-image {
+  width: 50%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+.story-image{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s ease;
+}
+
+.story-image{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.custom-link{
+  font-style: italic;
+  font-display:block;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*===Product pictures===*/
+
+/* Duplicate .story-image removed for clarity */
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;         /* Improves readability */
+  color: #333;              /* Soft black for comfort */
+  font-family: 'Open Sans', sans-serif; /* Clean and modern */
+  margin-bottom: 16px;      /* Adds spacing between paragraphs */
+
+}
+
+.our-story {
+  position: relative;
+  background-image: url('images/hero-about.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.our-story h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.6;         /* Improves readability */
+  color: #333;              /* Soft black for comfort */
+  font-family: 'Open Sans', sans-serif; /* Clean and modern */
+  margin-bottom: 16px;      /* Adds spacing between paragraphs */
+
+}
+
+.product-gallery img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.product-gallery img:hover {
+  transform: scale(1.05);
+}
+.rise-up{
+  background: url('img/Logo\ img\ cropped.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+}
+
+.header-image{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  background-color: #9ec77d;
+}
+
+.footer-social a {
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+
+.footer-social a:hover {
+  color: #0077b6; /* or your brand accent color */
+}
+/*===End of product pictures===*/
