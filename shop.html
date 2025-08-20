@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Form|Pearl Harmony </title>
+  <style>
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+    background: linear-gradient(to bottom, #5bf78f, #c09afd);
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #f9f5ef;
+    color: #333;
+    position: relative;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #4a4a4a;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #6a9e76;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #578a63;
+    }nav {
+  position: static;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #a06743;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+
+  <div class="form-container">
+    <h2>Order Form</h2>
+    <form action="/submit" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="WhatsAPP">WhatsApp Number</label>
+      <input type="WhatsAPP" id="WhatsAPP" name="WhatsAPP" required>
+
+    <label for="product">Select Product</label>
+    <select>
+        <label><input type="checkbox" name="product[]" value="bhotela"> Bhotela Healing Balm</label><br>
+        <label><input type="checkbox" name="product[]" value="tincture"> Herbal Tincture</label><br>
+        <label><input type="checkbox" name="product[]" value="tonic"> Herbal Tonic</label><br>
+        <label><input type="checkbox" name="product[]" value="cleanser"> Hydrating Cleanser</label><br>
+        <label><input type="checkbox" name="product[]" value="honey"> Honey Cough Remedy</label><br>
+        <label><input type="checkbox" name="product[]" value="skin-oil"> Dry Healing Skin Oil</label><br>
+        <label><input type="checkbox" name="product[]" value="hair-oil"> Herbal Hair Oil</label><br>
+
+    </select>
+    
+      <label for="message">Message / Special Request</label>
+      <textarea id="message" name="message" rows="4" placeholder="Let us know if you have allergies, delivery notes, or custom requests..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent actual submission
+
+      // Send form data to Formspree
+      fetch("https://formspree.io/f/xyzppldl", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("✅ Order form sent! Thank you for your submission.");
+          form.reset();
+        } else {
+          alert("❌ Something went wrong. Please try again.");
+        }
+      })
+      .catch(error => {
+        console.error("Form submission error:", error);
+        alert("⚠️ Network error. Please check your connection.");
+      });
+    });
+  });
+</script>
+<footer>
+  
+  <div class="footer-social">
+  
+  <br>
+  <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://wa.me/yourwhatsapplink" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <p>&copy; 2023 Pearl Harmony. All rights reserved.</p>
+  
+</div>
+</footer>  
+</body>
+</html>
